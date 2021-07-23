@@ -1,0 +1,7 @@
+{
+  "name": "Assignment 3 - Pizza App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
