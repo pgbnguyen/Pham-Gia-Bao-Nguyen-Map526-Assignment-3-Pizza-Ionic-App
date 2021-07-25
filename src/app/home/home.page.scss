@@ -1,27 +1,13 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-item.item{
+  cursor: pointer;
+  transition: transform .2s;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-item.item:hover {
+  transform: scale(0.9);
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#content{
+  padding:20;
+  height: 70vh;
+  width:280;
+  margin: 40px auto;
 }

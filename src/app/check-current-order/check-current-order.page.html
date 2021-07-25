@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Total Price: {{orderPrice}}$</ion-title>
+    <ion-title>{{quantity}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar *ngIf="isCollapsed">
+  <ion-button
+    id="deleteButton"
+    class="float-right"
+    (click)="deleteOrder()"
+    color="danger"
+    >Delete</ion-button
+  >
+</ion-toolbar>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let order of orders">
+            <ion-grid>
+              <ion-row (dblclick)="toogleToolBar(order)">
+                <ion-col>
+                  <ion-label>Topping: {{order.topping}}</ion-label>
+                  <ion-label>Size: {{order.size}}</ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-label>{{order.totalPrice}}$</ion-label>
+                  <ion-label>Quantity: {{order.qty}}</ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button color="success" (click)="checkoutOrder()">Check Out</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
